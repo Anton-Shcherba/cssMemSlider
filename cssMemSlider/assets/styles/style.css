@@ -13,17 +13,20 @@ body {
     display: none;
 }
 
-p {
-    color: white;
-    margin: 0;
-    display: none;
+.slider {
+    overflow: hidden;
+    border-radius: 1rem;
+    max-width: 56rem;  
+}
+
+.images {
+    display: flex;
+    transition: 0.3s ease-in-out;
 }
 
 img {
     width:100%;
     object-fit: cover;
-    border-radius: 3%;
-    display: none;
 }
 
 .signature {
@@ -31,6 +34,17 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+}
+
+.titles {
+    height: 1.7rem;
+    overflow: hidden;
+}
+
+p {
+    color: white;
+    margin: 0;
+    opacity: 0; 
 }
 
 .controls {
@@ -46,10 +60,21 @@ label {
 label:hover {
     cursor: pointer;
 }
+
+.circle {
+    display:  block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #72adff;
+    border: 0.2rem solid #72adff;
+    margin: auto;
+    align-self: center
+}
+
 label:hover .circle {
     background-color: white;
     border-color: white;
-    
 }
 
 #slide-1:checked ~ .signature .controls label[for=slide-1] .circle,
@@ -63,36 +88,68 @@ label:hover .circle {
     background-color: transparent;
 }
 
-#slide-1:checked ~ .img-1,
-#slide-2:checked ~ .img-2,
-#slide-3:checked ~ .img-3,
-#slide-4:checked ~ .img-4,
-#slide-5:checked ~ .img-5,
-#slide-6:checked ~ .img-6,
-#slide-7:checked ~ .img-7,
-#slide-8:checked ~ .img-8 {
-    display:  block;
+#slide-1:checked ~ .slider .images  {
+    transform: translateX(0);
+}
+#slide-2:checked ~ .slider .images  {
+    transform: translateX(-100%);
+}
+#slide-3:checked ~ .slider .images  {
+    transform: translateX(-200%);
+}
+#slide-4:checked ~ .slider .images  {
+    transform: translateX(-300%);
+}
+#slide-5:checked ~ .slider .images  {
+    transform: translateX(-400%);
+}
+#slide-6:checked ~ .slider .images  {
+    transform: translateX(-500%);
+}
+#slide-7:checked ~ .slider .images  {
+    transform: translateX(-600%);
+}
+#slide-8:checked ~ .slider .images  {
+    transform: translateX(-700%);
 }
 
-#slide-1:checked ~ .signature .title-1,
-#slide-2:checked ~ .signature .title-2,
-#slide-3:checked ~ .signature .title-3,
-#slide-4:checked ~ .signature .title-4,
-#slide-5:checked ~ .signature .title-5,
-#slide-6:checked ~ .signature .title-6,
-#slide-7:checked ~ .signature .title-7,
+#slide-1:checked ~ .signature .title-1 {
+    transition: opacity 0.3s linear;
+    transform: translateY(0);
+    opacity: 1;
+}
+#slide-2:checked ~ .signature .title-2 {
+    transition: opacity 0.3s linear;
+    transform: translateY(-100%);
+    opacity: 1;
+}
+#slide-3:checked ~ .signature .title-3 {
+    transition: opacity 0.3s linear;
+    transform: translateY(-200%);
+    opacity: 1;
+}
+#slide-4:checked ~ .signature .title-4 {
+    transition: opacity 0.3s linear;
+    transform: translateY(-300%);
+    opacity: 1;
+}
+#slide-5:checked ~ .signature .title-5 {
+    transition: opacity 0.3s linear;
+    transform: translateY(-400%);
+    opacity: 1;
+}
+#slide-6:checked ~ .signature .title-6 {
+    transition: opacity 0.3s linear;
+    transform: translateY(-500%);
+    opacity: 1;
+}
+#slide-7:checked ~ .signature .title-7 {
+    transition: opacity 0.3s linear;
+    transform: translateY(-600%);
+    opacity: 1;
+}
 #slide-8:checked ~ .signature .title-8 {
-    display:  block;
-}
-
-.circle {
-    display:  block;
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-    background-color: #72adff;
-    border: 0.2rem solid #72adff;
-    margin: auto;
-    
-    align-self: center
+    transition: opacity 0.3s linear;
+    transform: translateY(-700%);
+    opacity: 1;
 }
