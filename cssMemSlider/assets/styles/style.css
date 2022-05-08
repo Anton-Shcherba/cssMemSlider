@@ -63,8 +63,8 @@ label:hover {
 
 .circle {
     display:  block;
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 50%;
     background-color: #72adff;
     border: 0.2rem solid #72adff;
@@ -152,4 +152,36 @@ label:hover .circle {
     transition: opacity 0.3s linear;
     transform: translateY(-700%);
     opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .signature {
+        flex-direction: column;
+        margin-top: 2.05vw;
+    }
+    .titles {
+        align-self: flex-start;
+        height: 3.5vw;
+    }
+    .controls {
+        margin-top: 2.05vw;
+    }
+    p {
+        font-size: 3.1vw; 
+    }
+    label {
+        width: 4.1vw;
+        height: 4.1vw;
+        display: flex;
+    }
+    .circle {
+        display:  block;
+        width: 1.2vw;
+        height: 1.2vw;
+        border-radius: 50%;
+        background-color: #72adff;
+        border: 0.4vw solid #72adff;
+        margin: auto;
+        align-self: center
+    }
 }
