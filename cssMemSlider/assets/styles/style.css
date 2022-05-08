@@ -1,0 +1,98 @@
+body {
+    background-color: #202325;
+    font-size: 1.5em; 
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.input {
+    display: none;
+}
+
+p {
+    color: white;
+    margin: 0;
+    display: none;
+}
+
+img {
+    width:100%;
+    object-fit: cover;
+    border-radius: 3%;
+    display: none;
+}
+
+.signature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.controls {
+    display: flex;
+}
+
+label {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+}
+
+label:hover {
+    cursor: pointer;
+}
+label:hover .circle {
+    background-color: white;
+    border-color: white;
+    
+}
+
+#slide-1:checked ~ .signature .controls label[for=slide-1] .circle,
+#slide-2:checked ~ .signature .controls label[for=slide-2] .circle,
+#slide-3:checked ~ .signature .controls label[for=slide-3] .circle,
+#slide-4:checked ~ .signature .controls label[for=slide-4] .circle,
+#slide-5:checked ~ .signature .controls label[for=slide-5] .circle,
+#slide-6:checked ~ .signature .controls label[for=slide-6] .circle,
+#slide-7:checked ~ .signature .controls label[for=slide-7] .circle,
+#slide-8:checked ~ .signature .controls label[for=slide-8] .circle {
+    background-color: transparent;
+}
+
+#slide-1:checked ~ .img-1,
+#slide-2:checked ~ .img-2,
+#slide-3:checked ~ .img-3,
+#slide-4:checked ~ .img-4,
+#slide-5:checked ~ .img-5,
+#slide-6:checked ~ .img-6,
+#slide-7:checked ~ .img-7,
+#slide-8:checked ~ .img-8 {
+    display:  block;
+}
+
+#slide-1:checked ~ .signature .title-1,
+#slide-2:checked ~ .signature .title-2,
+#slide-3:checked ~ .signature .title-3,
+#slide-4:checked ~ .signature .title-4,
+#slide-5:checked ~ .signature .title-5,
+#slide-6:checked ~ .signature .title-6,
+#slide-7:checked ~ .signature .title-7,
+#slide-8:checked ~ .signature .title-8 {
+    display:  block;
+}
+
+.circle {
+    display:  block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #72adff;
+    border: 0.2rem solid #72adff;
+    margin: auto;
+    
+    align-self: center
+}
