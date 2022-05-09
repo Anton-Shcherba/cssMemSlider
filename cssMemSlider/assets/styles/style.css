@@ -157,31 +157,26 @@ label:hover .circle {
 @media screen and (max-width: 768px) {
     .signature {
         flex-direction: column;
-        margin-top: 2.05vw;
+        margin-top: 2vw;
     }
     .titles {
         align-self: flex-start;
-        height: 3.5vw;
+        height: 4vw;
+        margin-top: 2vw;
     }
     .controls {
-        margin-top: 2.05vw;
+        order: -1;
     }
     p {
-        font-size: 3.1vw; 
+        font-size: 3.5vw; 
     }
     label {
-        width: 4.1vw;
-        height: 4.1vw;
-        display: flex;
+        width: 4.5vw;
+        height: 4.5vw;
     }
     .circle {
-        display:  block;
-        width: 1.2vw;
-        height: 1.2vw;
-        border-radius: 50%;
-        background-color: #72adff;
-        border: 0.4vw solid #72adff;
-        margin: auto;
-        align-self: center
+        width: 1.5vw;
+        height: 1.5vw;
+        border: 0.5vw solid #72adff;
     }
 }
