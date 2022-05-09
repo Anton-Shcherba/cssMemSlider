@@ -61,6 +61,10 @@ label:hover {
     cursor: pointer;
 }
 
+label:active > .circle {
+    transform: scale(0.75);
+}
+
 .circle {
     display:  block;
     width: 0.6rem;
