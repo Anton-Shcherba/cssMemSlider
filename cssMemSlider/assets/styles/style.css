@@ -10,7 +10,9 @@ body {
 }
 
 .input {
-    display: none;
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
 }
 
 .slider {
@@ -38,15 +40,19 @@ img {
 
 .titles {
     height: 1.7rem;
+    width: 30rem;
+    display: flex;
     overflow: hidden;
 }
 
 p {
     color: white;
+    min-width: 30rem;
     margin: 0;
-    opacity: 0; 
+    white-space: nowrap;
+    transition: transform 0.3s linear;
 }
-
+ 
 .controls {
     display: flex;
 }
@@ -92,70 +98,93 @@ label:hover .circle {
     background-color: transparent;
 }
 
-#slide-1:checked ~ .slider .images  {
+#slide-1:checked ~ .slider .images,
+#slide-1:checked ~ .signature .title-1,
+#slide-1:checked ~ .signature .title-2,
+#slide-1:checked ~ .signature .title-3,
+#slide-1:checked ~ .signature .title-4,
+#slide-1:checked ~ .signature .title-5,
+#slide-1:checked ~ .signature .title-6,
+#slide-1:checked ~ .signature .title-7,
+#slide-1:checked ~ .signature .title-8  {
     transform: translateX(0);
 }
-#slide-2:checked ~ .slider .images  {
+#slide-2:checked ~ .slider .images,
+#slide-2:checked ~ .signature .title-1,
+#slide-2:checked ~ .signature .title-2,
+#slide-2:checked ~ .signature .title-3,
+#slide-2:checked ~ .signature .title-4,
+#slide-2:checked ~ .signature .title-5,
+#slide-2:checked ~ .signature .title-6,
+#slide-2:checked ~ .signature .title-7,
+#slide-2:checked ~ .signature .title-8  {
     transform: translateX(-100%);
 }
-#slide-3:checked ~ .slider .images  {
+#slide-3:checked ~ .slider .images,
+#slide-3:checked ~ .signature .title-1,
+#slide-3:checked ~ .signature .title-2,
+#slide-3:checked ~ .signature .title-3,
+#slide-3:checked ~ .signature .title-4,
+#slide-3:checked ~ .signature .title-5,
+#slide-3:checked ~ .signature .title-6,
+#slide-3:checked ~ .signature .title-7,
+#slide-3:checked ~ .signature .title-8  {
     transform: translateX(-200%);
 }
-#slide-4:checked ~ .slider .images  {
+#slide-4:checked ~ .slider .images,
+#slide-4:checked ~ .signature .title-1,
+#slide-4:checked ~ .signature .title-2,
+#slide-4:checked ~ .signature .title-3,
+#slide-4:checked ~ .signature .title-4,
+#slide-4:checked ~ .signature .title-5,
+#slide-4:checked ~ .signature .title-6,
+#slide-4:checked ~ .signature .title-7,
+#slide-4:checked ~ .signature .title-8  {
     transform: translateX(-300%);
 }
-#slide-5:checked ~ .slider .images  {
+#slide-5:checked ~ .slider .images,
+#slide-5:checked ~ .signature .title-1,
+#slide-5:checked ~ .signature .title-2,
+#slide-5:checked ~ .signature .title-3,
+#slide-5:checked ~ .signature .title-4,
+#slide-5:checked ~ .signature .title-5,
+#slide-5:checked ~ .signature .title-6,
+#slide-5:checked ~ .signature .title-7,
+#slide-5:checked ~ .signature .title-8  {
     transform: translateX(-400%);
 }
-#slide-6:checked ~ .slider .images  {
+#slide-6:checked ~ .slider .images,
+#slide-6:checked ~ .signature .title-1,
+#slide-6:checked ~ .signature .title-2,
+#slide-6:checked ~ .signature .title-3,
+#slide-6:checked ~ .signature .title-4,
+#slide-6:checked ~ .signature .title-5,
+#slide-6:checked ~ .signature .title-6,
+#slide-6:checked ~ .signature .title-7,
+#slide-6:checked ~ .signature .title-8  {
     transform: translateX(-500%);
 }
-#slide-7:checked ~ .slider .images  {
+#slide-7:checked ~ .slider .images,
+#slide-7:checked ~ .signature .title-1,
+#slide-7:checked ~ .signature .title-2,
+#slide-7:checked ~ .signature .title-3,
+#slide-7:checked ~ .signature .title-4,
+#slide-7:checked ~ .signature .title-5,
+#slide-7:checked ~ .signature .title-6,
+#slide-7:checked ~ .signature .title-7,
+#slide-7:checked ~ .signature .title-8  {
     transform: translateX(-600%);
 }
-#slide-8:checked ~ .slider .images  {
+#slide-8:checked ~ .slider .images,
+#slide-8:checked ~ .signature .title-1,
+#slide-8:checked ~ .signature .title-2,
+#slide-8:checked ~ .signature .title-3,
+#slide-8:checked ~ .signature .title-4,
+#slide-8:checked ~ .signature .title-5,
+#slide-8:checked ~ .signature .title-6,
+#slide-8:checked ~ .signature .title-7,
+#slide-8:checked ~ .signature .title-8  {
     transform: translateX(-700%);
-}
-
-#slide-1:checked ~ .signature .title-1 {
-    transition: opacity 0.3s linear;
-    transform: translateY(0);
-    opacity: 1;
-}
-#slide-2:checked ~ .signature .title-2 {
-    transition: opacity 0.3s linear;
-    transform: translateY(-100%);
-    opacity: 1;
-}
-#slide-3:checked ~ .signature .title-3 {
-    transition: opacity 0.3s linear;
-    transform: translateY(-200%);
-    opacity: 1;
-}
-#slide-4:checked ~ .signature .title-4 {
-    transition: opacity 0.3s linear;
-    transform: translateY(-300%);
-    opacity: 1;
-}
-#slide-5:checked ~ .signature .title-5 {
-    transition: opacity 0.3s linear;
-    transform: translateY(-400%);
-    opacity: 1;
-}
-#slide-6:checked ~ .signature .title-6 {
-    transition: opacity 0.3s linear;
-    transform: translateY(-500%);
-    opacity: 1;
-}
-#slide-7:checked ~ .signature .title-7 {
-    transition: opacity 0.3s linear;
-    transform: translateY(-600%);
-    opacity: 1;
-}
-#slide-8:checked ~ .signature .title-8 {
-    transition: opacity 0.3s linear;
-    transform: translateY(-700%);
-    opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -163,21 +192,28 @@ label:hover .circle {
         flex-direction: column;
         margin-top: 2vw;
     }
+
     .titles {
         align-self: flex-start;
         height: 4vw;
         margin-top: 2vw;
+        width: 90vw;
     }
+
     .controls {
         order: -1;
     }
+
     p {
         font-size: 3.5vw; 
+        min-width: 90vw;
     }
+
     label {
         width: 4.5vw;
         height: 4.5vw;
     }
+
     .circle {
         width: 1.5vw;
         height: 1.5vw;
