@@ -47,7 +47,7 @@ img {
 
 p {
     color: white;
-    min-width: 30rem;
+    min-width: 31rem;
     margin: 0;
     white-space: nowrap;
     transition: transform 0.3s linear;
@@ -197,7 +197,7 @@ label:hover .circle {
         align-self: flex-start;
         height: 4vw;
         margin-top: 2vw;
-        width: 90vw;
+        width: calc(100vw - 16px);
     }
 
     .controls {
@@ -206,7 +206,7 @@ label:hover .circle {
 
     p {
         font-size: 3.5vw; 
-        min-width: 90vw;
+        min-width: 100vw;
     }
 
     label {
