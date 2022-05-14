@@ -1,6 +1,7 @@
 body {
     background-color: #202325;
     font-size: 1.5em; 
+    margin: 1vw;
 }
 
 .wrapper {
@@ -197,7 +198,7 @@ label:hover .circle {
         align-self: flex-start;
         height: 4vw;
         margin-top: 2vw;
-        width: calc(100vw - 16px);
+        width: 98vw;
     }
 
     .controls {
