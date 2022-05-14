@@ -1,0 +1,223 @@
+body {
+    background-color: #202325;
+    font-size: 1.5em; 
+    margin: 1vw;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.input {
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
+
+.slider {
+    overflow: hidden;
+    border-radius: 1rem;
+    max-width: 56rem;  
+}
+
+.images {
+    display: flex;
+    transition: 0.3s ease-in-out;
+}
+
+img {
+    width:100%;
+    object-fit: cover;
+}
+
+.signature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.titles {
+    height: 1.7rem;
+    width: 30rem;
+    display: flex;
+    overflow: hidden;
+}
+
+p {
+    color: white;
+    min-width: 31rem;
+    margin: 0;
+    white-space: nowrap;
+    transition: transform 0.3s linear;
+}
+ 
+.controls {
+    display: flex;
+}
+
+label {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+label:active > .circle {
+    transform: scale(0.75);
+}
+
+.circle {
+    display:  block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #72adff;
+    border: 0.2rem solid #72adff;
+    margin: auto;
+    align-self: center
+}
+
+label:hover .circle {
+    background-color: white;
+    border-color: white;
+}
+
+#slide-1:checked ~ .signature .controls label[for=slide-1] .circle,
+#slide-2:checked ~ .signature .controls label[for=slide-2] .circle,
+#slide-3:checked ~ .signature .controls label[for=slide-3] .circle,
+#slide-4:checked ~ .signature .controls label[for=slide-4] .circle,
+#slide-5:checked ~ .signature .controls label[for=slide-5] .circle,
+#slide-6:checked ~ .signature .controls label[for=slide-6] .circle,
+#slide-7:checked ~ .signature .controls label[for=slide-7] .circle,
+#slide-8:checked ~ .signature .controls label[for=slide-8] .circle {
+    background-color: transparent;
+}
+
+#slide-1:checked ~ .slider .images,
+#slide-1:checked ~ .signature .title-1,
+#slide-1:checked ~ .signature .title-2,
+#slide-1:checked ~ .signature .title-3,
+#slide-1:checked ~ .signature .title-4,
+#slide-1:checked ~ .signature .title-5,
+#slide-1:checked ~ .signature .title-6,
+#slide-1:checked ~ .signature .title-7,
+#slide-1:checked ~ .signature .title-8  {
+    transform: translateX(0);
+}
+#slide-2:checked ~ .slider .images,
+#slide-2:checked ~ .signature .title-1,
+#slide-2:checked ~ .signature .title-2,
+#slide-2:checked ~ .signature .title-3,
+#slide-2:checked ~ .signature .title-4,
+#slide-2:checked ~ .signature .title-5,
+#slide-2:checked ~ .signature .title-6,
+#slide-2:checked ~ .signature .title-7,
+#slide-2:checked ~ .signature .title-8  {
+    transform: translateX(-100%);
+}
+#slide-3:checked ~ .slider .images,
+#slide-3:checked ~ .signature .title-1,
+#slide-3:checked ~ .signature .title-2,
+#slide-3:checked ~ .signature .title-3,
+#slide-3:checked ~ .signature .title-4,
+#slide-3:checked ~ .signature .title-5,
+#slide-3:checked ~ .signature .title-6,
+#slide-3:checked ~ .signature .title-7,
+#slide-3:checked ~ .signature .title-8  {
+    transform: translateX(-200%);
+}
+#slide-4:checked ~ .slider .images,
+#slide-4:checked ~ .signature .title-1,
+#slide-4:checked ~ .signature .title-2,
+#slide-4:checked ~ .signature .title-3,
+#slide-4:checked ~ .signature .title-4,
+#slide-4:checked ~ .signature .title-5,
+#slide-4:checked ~ .signature .title-6,
+#slide-4:checked ~ .signature .title-7,
+#slide-4:checked ~ .signature .title-8  {
+    transform: translateX(-300%);
+}
+#slide-5:checked ~ .slider .images,
+#slide-5:checked ~ .signature .title-1,
+#slide-5:checked ~ .signature .title-2,
+#slide-5:checked ~ .signature .title-3,
+#slide-5:checked ~ .signature .title-4,
+#slide-5:checked ~ .signature .title-5,
+#slide-5:checked ~ .signature .title-6,
+#slide-5:checked ~ .signature .title-7,
+#slide-5:checked ~ .signature .title-8  {
+    transform: translateX(-400%);
+}
+#slide-6:checked ~ .slider .images,
+#slide-6:checked ~ .signature .title-1,
+#slide-6:checked ~ .signature .title-2,
+#slide-6:checked ~ .signature .title-3,
+#slide-6:checked ~ .signature .title-4,
+#slide-6:checked ~ .signature .title-5,
+#slide-6:checked ~ .signature .title-6,
+#slide-6:checked ~ .signature .title-7,
+#slide-6:checked ~ .signature .title-8  {
+    transform: translateX(-500%);
+}
+#slide-7:checked ~ .slider .images,
+#slide-7:checked ~ .signature .title-1,
+#slide-7:checked ~ .signature .title-2,
+#slide-7:checked ~ .signature .title-3,
+#slide-7:checked ~ .signature .title-4,
+#slide-7:checked ~ .signature .title-5,
+#slide-7:checked ~ .signature .title-6,
+#slide-7:checked ~ .signature .title-7,
+#slide-7:checked ~ .signature .title-8  {
+    transform: translateX(-600%);
+}
+#slide-8:checked ~ .slider .images,
+#slide-8:checked ~ .signature .title-1,
+#slide-8:checked ~ .signature .title-2,
+#slide-8:checked ~ .signature .title-3,
+#slide-8:checked ~ .signature .title-4,
+#slide-8:checked ~ .signature .title-5,
+#slide-8:checked ~ .signature .title-6,
+#slide-8:checked ~ .signature .title-7,
+#slide-8:checked ~ .signature .title-8  {
+    transform: translateX(-700%);
+}
+
+@media screen and (max-width: 768px) {
+    .signature {
+        flex-direction: column;
+        margin-top: 2vw;
+    }
+
+    .titles {
+        align-self: flex-start;
+        height: 4vw;
+        margin-top: 2vw;
+        width: 98vw;
+    }
+
+    .controls {
+        order: -1;
+    }
+
+    p {
+        font-size: 3.5vw; 
+        min-width: 100vw;
+    }
+
+    label {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+
+    .circle {
+        width: 1.5vw;
+        height: 1.5vw;
+        border: 0.5vw solid #72adff;
+    }
+}
